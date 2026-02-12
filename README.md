@@ -1,37 +1,102 @@
-# Run From It
+# 🎈 Run From IT
 
-**Run From It** is an exciting browser-based game built with Kaplay.js. The goal is simple: run as far as you can and avoid the obstacles!
+An endless runner inspired by the classic Dino Run formula.
+You play as Pennywise sprinting through the frozen streets of Derry during a winter night, endlessly chasing a child who refuses to slow down.
 
-## 🚀 Technologies Used
+The goal is simple. Survive as long as possible. Jump over obstacles. Keep the chase alive.
 
-- **Kaplay.js**: A JavaScript game library that makes game development fun and easy.
-- **JavaScript / TypeScript**: The core logic of the game.
-- **Vite**: A fast build tool for modern web projects.
-- **Node.js & npm**: Used for dependency management and running scripts.
+---
 
-## 📂 Folder Structure
+## 🕹 Gameplay
 
-- `src` - Source code for the Kaplay project.
-- `dist` - Distribution folder, contains `index.html`, built JS bundle, and static assets.
+This is a fast, minimal endless runner focused on timing and reflex.
 
-## 🛠️ Development
+You run automatically.
+Your only job is to jump and avoid obstacles.
 
-```sh
-$ npm run dev
+The longer you survive, the faster the game becomes.
+
+---
+
+## 🎮 Controls
+
+Super complicated control scheme incoming:
+
+| Action | Key               |
+| ------ | ----------------- |
+| Jump   | Space             |
+| Jump   | Left Mouse Button |
+
+Yes, that is it.
+
+---
+
+## 🚀 Tech Stack
+
+Built with speed and simplicity in mind.
+
+* JavaScript
+* Kaplay game library
+
+This project was made to focus on gameplay and product delivery rather than spending months learning art pipelines.
+
+---
+
+## 🎨 Asset Credits
+
+To accelerate production and compensate for limited design experience, the visual pipeline used AI tools:
+
+* Base and static sprites generated with the latest ChatGPT model
+* Background generated with the latest Gemini Pro model
+* Animations generated with Ludo.ai
+
+All assets were curated and integrated manually into the game.
+
+---
+
+## 📦 Running the Project
+
+1. Clone the repository
+
+```
+git clone https://github.com/yourusername/your-repo.git
 ```
 
-will start a dev server at http://localhost:8000
+2. Open the project folder
 
-## Distribution
-
-```sh
-$ npm run build
+```
+cd your-repo
 ```
 
-will build your js files into `dist/`
+3. Install dependencies
 
-```sh
-$ npm run zip
+```
+npm install
 ```
 
-will build your game and package into a .zip file, you can upload to your server or itch.io / newground etc.
+4. Start the game
+
+```
+npm run dev
+```
+
+Open your browser and start running forever.
+
+---
+
+## 🎯 Project Goals
+
+* Practice JavaScript game development
+* Learn Kaplay fundamentals
+* Ship a complete and playable product quickly
+* Focus on gameplay over asset production
+
+---
+
+## 📜 License
+
+MIT
+
+---
+
+Enjoy the endless winter chase in Derry. 🎈
