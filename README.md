@@ -95,7 +95,7 @@ Open your browser and start running forever.
 
 ## 📜 License
 
-MIT
+MIT License
 
 ---
 
