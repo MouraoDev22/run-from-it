@@ -9,6 +9,8 @@ const INITIAL_SPEED = 300;
 kaplay();
 
 // --- Assets ---
+loadRoot("./");
+
 loadSound("backgroundMusic", "music/backgroundMusic.mp3");
 loadSprite("backgroundImage", "sprites/background-image.jpg");
 loadSprite("pennywise", "sprites/pennywise/pennywise.png");
@@ -98,12 +100,7 @@ scene("game", () => {
         }
     });
 
-    onResize(() => {
-        bg1.scale = vec2(width() / 1024, height() / 572);
-        bg2.scale = vec2(width() / 1024, height() / 572);
-    });
-
-    add([
+    const floor = add([
         rect(width(), FLOOR_HEIGHT),
         pos(0, height()),
         anchor("botleft"),
@@ -149,6 +146,17 @@ scene("game", () => {
     ]);
 
     child.play("run");
+
+    onResize(() => {
+        bg1.scale = vec2(width() / 1024, height() / 572);
+        bg2.scale = vec2(width() / 1024, height() / 572);
+        floor.width = width();
+        floor.pos.y = height();
+        player.pos.x = width() / 5;
+        player.pos.y = height() - 90;
+        child.pos.x = width() - 140;
+        child.pos.y = height() - 90;
+    });
 
     // 4. Input & Control
     function jump() {
@@ -245,7 +253,7 @@ scene("game", () => {
 });
 
 scene("lose", (score) => {
-    const bg1 = add([
+    const bg = add([
         sprite("backgroundImage"),
         pos(0, 0),
         scale(width() / 1024, height() / 572),
@@ -254,7 +262,7 @@ scene("lose", (score) => {
         "background",
     ]);
 
-    add([
+    const floor = add([
         rect(width(), FLOOR_HEIGHT),
         pos(0, height()),
         anchor("botleft"),
@@ -265,19 +273,27 @@ scene("lose", (score) => {
         "floor",
     ]);
     
-    add([
+    const pennywise = add([
         sprite("pennywise"),
         pos(width() / 2, height() / 2 - 80),
         scale(0.6),
         anchor("center"),
     ]);
 
-    add([
+    const scoreText = add([
         text(score.toFixed()),
         pos(width() / 2, height() / 2 + 80),
         scale(2),
         anchor("center"),
     ]);
+
+    onResize(() => {
+        bg.scale = vec2(width() / 1024, height() / 572);
+        floor.width = width();
+        floor.pos.y = height();
+        pennywise.pos = vec2(width() / 2, height() / 2 - 80);
+        scoreText.pos = vec2(width() / 2, height() / 2 + 80);
+    });
 
     onKeyPress("space", () => go("game"));
     onClick(() => go("game"));
