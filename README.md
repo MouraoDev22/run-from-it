@@ -95,6 +95,23 @@ Open your browser and start running forever.
 
 ---
 
+Perfeito, vamos acrescentar a parte sonora antes que o silêncio fique constrangedor.
+
+Adicione esta seção ao README:
+
+---
+
+## 🎵 Music Credit
+
+Background music by **Alexander Rose Music**
+Instrumental cover inspired by the opening theme of *IT: Welcome to Derry*.
+
+[https://www.youtube.com/watch?v=ijGwGHabDUQ](https://www.youtube.com/watch?v=ijGwGHabDUQ)
+
+All rights belong to the original creator.
+
+---
+
 ## 📜 License
 
 MIT License
