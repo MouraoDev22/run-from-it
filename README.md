@@ -5,6 +5,8 @@ You play as Pennywise sprinting through the frozen streets of Derry during a win
 
 The goal is simple. Survive as long as possible. Jump over obstacles. Keep the chase alive.
 
+<img width="100%" height="949" alt="image" src="https://github.com/user-attachments/assets/ab7b8c65-ab78-4ed9-9b71-6b68c956b39f" />
+
 ---
 
 ## 🕹 Gameplay
