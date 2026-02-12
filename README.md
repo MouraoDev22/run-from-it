@@ -59,13 +59,13 @@ All assets were curated and integrated manually into the game.
 1. Clone the repository
 
 ```
-git clone https://github.com/yourusername/your-repo.git
+git clone https://github.com/MouraoDev22/run-from-it.git
 ```
 
 2. Open the project folder
 
 ```
-cd your-repo
+cd run-from-it
 ```
 
 3. Install dependencies
