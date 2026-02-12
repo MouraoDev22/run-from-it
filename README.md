@@ -1,10 +1,20 @@
-# Folder structure
+# Run From It
 
-- `src` - source code for your kaplay project
-- `dist` - distribution folder, contains your index.html, built js bundle and static assets
+**Run From It** is an exciting browser-based game built with Kaplay.js. The goal is simple: run as far as you can and avoid the obstacles!
 
+## 🚀 Technologies Used
 
-## Development
+- **Kaplay.js**: A JavaScript game library that makes game development fun and easy.
+- **JavaScript / TypeScript**: The core logic of the game.
+- **Vite**: A fast build tool for modern web projects.
+- **Node.js & npm**: Used for dependency management and running scripts.
+
+## 📂 Folder Structure
+
+- `src` - Source code for the Kaplay project.
+- `dist` - Distribution folder, contains `index.html`, built JS bundle, and static assets.
+
+## 🛠️ Development
 
 ```sh
 $ npm run dev
