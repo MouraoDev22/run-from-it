@@ -38,7 +38,7 @@ loadSprite("pennywiseJumping", "sprites/pennywise/pennywise-jumping.png", {
         }
     }
 });
-loadSprite("child", "sprites/child1/child-running.png", {
+loadSprite("childRunning", "sprites/child1/child-running.png", {
     sliceX: 6,
     sliceY: 6,
     anims: {
@@ -137,7 +137,7 @@ scene("game", () => {
     player.play("run");
 
     const child = add([
-        sprite("child"),
+        sprite("childRunning"),
         pos(width() - 140, height() - 90),
         anchor("center"),
         area({ scale: vec2(0.5, 1) }),
@@ -299,11 +299,69 @@ scene("lose", (score) => {
     onClick(() => go("game"));
 });
 
-// --- Start ---
-go("game");
+scene("start", () => {
+    usePostEffect("selectiveRed");
 
-const backgroundMusic = play("backgroundMusic", {
-    volume: 0.3,
-    speed: 1,
-    loop: true,
+    const bg = add([
+        sprite("backgroundImage"),
+        pos(0, 0),
+        scale(width() / 1024, height() / 572),
+        fixed(),
+        z(-1),
+    ]);
+
+    const floor = add([
+        rect(width(), FLOOR_HEIGHT),
+        pos(0, height()),
+        anchor("botleft"),
+        color(255, 255, 255),
+        outline(2),
+    ]);
+
+    const player = add([
+        sprite("pennywise"),
+        pos(width() / 5, height() - 90),
+        anchor("center"),
+        scale(0.6),
+    ]);
+
+    const child = add([
+        sprite("childRunning"),
+        pos(width() - 140, height() - 90),
+        anchor("center"),
+        scale(0.35),
+    ]);
+
+    const startText = add([
+        text("Click to Play"),
+        pos(width() / 2, height() / 2),
+        anchor("center"),
+        scale(1.5),
+    ]);
+
+    onResize(() => {
+        bg.scale = vec2(width() / 1024, height() / 572);
+        floor.width = width();
+        floor.pos.y = height();
+        player.pos.x = width() / 5;
+        player.pos.y = height() - 90;
+        child.pos.x = width() - 140;
+        child.pos.y = height() - 90;
+        startText.pos = vec2(width() / 2, height() / 2);
+    });
+
+    const startGame = () => {
+        play("backgroundMusic", {
+            volume: 0.3,
+            speed: 1,
+            loop: true,
+        });
+        go("game");
+    };
+
+    onKeyPress("space", startGame);
+    onClick(startGame);
 });
+
+// --- Start ---
+go("start");
