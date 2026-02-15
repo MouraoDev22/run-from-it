@@ -111,7 +111,7 @@ scene("game", () => {
         "floor",
     ]);
 
-    loop(0.05, () => {
+    loop(0.1, () => {
         add([
             circle(rand(1, 3)),
             pos(rand(0, width()), -10),
