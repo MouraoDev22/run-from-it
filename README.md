@@ -9,6 +9,13 @@ The goal is simple. Survive as long as possible. Jump over obstacles. Keep the c
 
 ---
 
+## 🌐 Play Online
+
+Play directly in your browser via GitHub Pages
+[https://mouraodev22.github.io/run-from-it/](https://mouraodev22.github.io/run-from-it/)
+
+---
+
 ## 🕹 Gameplay
 
 This is a fast, minimal endless runner focused on timing and reflex.
@@ -95,12 +102,6 @@ Open your browser and start running forever.
 
 ---
 
-Perfeito, vamos acrescentar a parte sonora antes que o silêncio fique constrangedor.
-
-Adicione esta seção ao README:
-
----
-
 ## 🎵 Music Credit
 
 Background music by **Alexander Rose Music**
@@ -115,7 +116,3 @@ All rights belong to the original creator.
 ## 📜 License
 
 MIT License
-
----
-
-Enjoy the endless winter chase in Derry. 🎈
